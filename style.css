@@ -13,9 +13,15 @@ body{
     min-height: 100vh;
     background: url("images/bg.jpg") #030728 no-repeat center;
 }
+.slider-wrapper {
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 70px 55px;
+
+}
 .card-list .card-item {
     color: white;
-    width: 400px;
+    user-select: none;
     padding: 35px;
     display: flex;
     flex-direction: column;
@@ -55,4 +61,26 @@ body{
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid #fff;
     color: #fff;
+}
+.slider-wrapper .swiper-pagination-bullet {
+    background: #fff;
+    height: 15px;
+    width: 15px;
+}
+.slider-wrapper .swiper-slide-button {
+    color: #fff;
+    margin-top: -50px;
+    transition: 0.2s ease;
+}
+.slider-wrapper .swiper-slide-button:hover{
+    color: #4658ff;
+}
+@media(max-width: 768px){
+    .slider-wrapper{
+        margin: 0 10px 40px;
+    }
+    .slider-wrapper .swiper-slide-button {
+        display: none;
+        
+    }
 }
